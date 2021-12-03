@@ -1,0 +1,345 @@
+uno {
+    margin-left: 3px;
+    font-size: 10px;
+}
+p {
+  margin-left: 3px;
+  padding: 35px;
+  font-size: 10px;
+  font: 14px Verdana, Geneva, Tahoma, sans-serif;
+  text-align: left;
+}
+h1 {
+    /*text-align: center;
+    background-color:rgb(71, 63, 62);
+    color: grey;*/
+    position: relative;
+    animation-name: textcolor;
+    animation-duration: 4s;
+    animation-iteration-count: 10;
+    animation-direction: alternate;
+  }
+  /*div3 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+  }*/
+  
+/* Atributo Class <p class="contenedor">texto</p> */
+.contenedor {
+    font: bold 26px Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+}
+.contenedor2 {
+    font: bold 16px Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(81, 100, 81);
+    text-align: left;
+}
+/* Atributo id <p id="mitexto">texto</p> */
+#mitexto {
+    font-size: 20px;
+    color: rgb(71, 63, 62);
+}
+/* Otro atributo */
+p[otro]{
+    font-size: 30px;
+    color: cornflowerblue;
+}
+/*Propiedades de formato:
+Texto:letra font agrupa todos */
+#titulo {
+    font: bold 24px Arial,sans-serif
+}
+/*Propiedades de formato:
+Texto: text-align: left, right, center, justfy
+text-indent (sangria de un parrafo en px) 
+line-height (espacio entre lineas)
+vertical-align (para texto e imagen) 
+Text-decoration underline, overline, line-through, none */
+#caja {
+width: 200px;
+overflow: hidden;
+margin: 30px;
+padding: 15px;
+
+}
+/* width ancho de la caja, height el alto. 
+overflow es como se muestra el sobrante de la caja: hidden no lo muestra, 
+scroll añade un cursor
+margin: 30px; es el margen 
+Padding: 15px; el relleno del elemento
+background: color url("imagen.jpg")repeat;
+*/
+/* Bordes Sombras Gradientes Filtros Transformaciones*/
+.caja1 {
+    margin:30px;
+    padding: 15px;
+    text-align: center;
+    border: 2px solid;
+    border-radius: 20px;
+}
+/*cajas Display (none block inline inline-block)*/
+/*cajas flexibles*/
+#cajapadre {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+    border: 1px solid;
+    align-items: center;
+}
+#cajapadre>div {
+height: 500px;
+margin: 5px;
+background-color: #cccccc;
+}
+#caja-1 {
+    flex: 1;
+}
+#caja-2 {
+    flex: 1;
+    margin: 5px;
+    padding: 15px;
+}
+#caja-3 {
+    flex: 1;
+}
+#caja-4 {
+    flex: 1;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: darkslategrey;
+    opacity: 0.3;
+
+}
+.boton {
+    width: 300px;
+    border: dimgrey;
+    margin: 10px;
+    text-align: center;
+    background-color: gainsboro;
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Style the body */
+body {
+    font-family: Arial;
+    margin: 10px;
+    background-color: rgb(179, 177, 177);
+    border-top: 1px solid black;
+  }
+  
+  /* Header/logo Title */
+  .header {
+    padding: 60px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+  }
+  
+  /* Navegador*/
+  .navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #333; 
+  }
+  
+  /* navegador links */
+  .navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  /* navegador on hover */
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Columna contenedor */
+  .row {  
+    display: flex;
+   
+    flex-wrap: wrap;
+  }
+  
+ 
+  /* Sidebar/columna izq*/
+  .side {
+    flex: 30%;
+    justify-content: center;
+    
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  
+  /* Main column */
+  .main {
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+  }
+  
+  /* caja imagen */
+  .imgagen {
+    background-color: #aaa;
+    justify-content: center;
+    visibility: hidden;
+    width: 80%;
+    padding: 20px;
+  }
+  
+  /* Pie pag */
+  .pie {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+  }
+ 
+  
+   /*animación del fondo color*/
+  @keyframes example {
+    0%   {background-color: rgb(141, 134, 134);}
+    25%  {background-color: rgb(102, 102, 29);}
+    50%  {background-color: rgb(112, 112, 121);}
+    100% {background-color: green;}
+  }
+  /*animación del texto posición y color*/
+  @keyframes textcolor {
+    0%   {color: red; left:0px; top: e;}
+    25%  {color: yellow; left:20px; top:0px }
+    50%  {color: blue; left:0px; top: 60px;}
+    100% {color: blueviolet; left: 0px; top: 0px;}
+  }
+  /* The animation code */
+@keyframes example2 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+  
+  /* animación movimiento de un cuadrado */
+  div3 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+  }
+ 
+  
+  .div1 {
+   /* width: 100%;*/
+    height: 100px;
+    position: relative;
+    background-color: rgb(141, 134, 134);
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 10;
+    animation-direction: alternate;
+  }
+  #div2 {animation-timing-function: linear;}
+  
+  .pinWrapper {
+    padding: 0;
+    border: 2px solid black;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: white;
+    margin: 10px;
+  }
+  
+  .pinWrapper p {
+    font-size: 18px;
+  }
+  
+  .pin {
+    padding: 14px;
+  }
+  
+  .CreditTitle {
+    border-top: 1px solid black;
+   /* border-top: 1px solid #e0e0e0;*/
+  }
+  
+  .pinImage img {
+    width: 100%;
+    border-top: 10px solid black;
+  }
+  
+  
+  /* FLEXBOX */
+  
+  .pinWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+  }  
+
+
+divCal {
+  text-align: center;
+  width: 300px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+ol {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style-type: circle;
+}
+
+li {
+  font-size: 1.5ch;
+}
+
+h2 {
+  margin-bottom: 4px;
+  padding: 0;
+  margin: 25px 25px 25px 25px; /*sup; der; inf; izq;*/
+  /*background-color: black;*/
+  color: black;
+  text-align: left;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.first-day {
+  grid-column-start: var(--first-day-start, 0);
+}
+
+.day-name {
+  background: #eee;
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 2px;
+  padding: 4px;
+  text-align: center;
+}
+
+  @media screen and (max-width: 700px) {
+    .row, .navbar {   
+      flex-direction: column;
+    }
+  }

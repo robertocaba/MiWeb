@@ -1,0 +1,85 @@
+Portofolio.html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<header>
+    <div class="navbar">
+        <a href="Portofolio.html">Portofolio</a>
+        <a href="Biografia.html">Bibliografía</a>
+        <a href="Contacto.html">Contacto</a>
+        <a href="index.html">Inicio</a>
+        
+      </div>
+</header>
+<body>
+  <h2>Portfolio</h2>
+  <div class="side">
+    <video width="320" height="240" controls>
+      <source src="./videos/GOP1.MP4" type="video/mp4">
+      <source src="./videos/GOP1.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+    </video>
+ </div>
+  <p> Nueva página, de nombre portfolio.html, en la que se deberán incluir como mínimo algunos elementos multimedia (imágenes, videos, audios).
+  </p>
+  <div class="fakeimg"><img src="/img/logoBf.png" alt="mi"width="100%" height="auto">imagen auto</div>
+<!--   
+<script>
+  const actualYear = 2021
+  const locale = 'es'
+
+  const intlForMonths = new Intl.DateTimeFormat(locale, { month: 'long' })
+  const months = [...Array(12).keys()]
+
+  const intlForWeeks = new Intl.DateTimeFormat(locale, { weekday: 'short' })
+  const weekDays = [...Array(7).keys()].map((dayIndex) =>
+    intlForWeeks.format(new Date(2021, 2, dayIndex + 1))
+  )
+
+  const calendar = months.map((monthIndex) => {
+    const monthName = intlForMonths.format(new Date(actualYear, monthIndex))
+    const nextMonthIndex = (monthIndex + 1) % 12
+    const daysOfMonth = new Date(actualYear, nextMonthIndex, 0).getDate()
+    const startsOn = new Date(actualYear, monthIndex, 1).getDay()
+
+    return {
+      daysOfMonth,
+      monthName,
+      startsOn
+    }
+  })
+
+  const html = calendar
+    .map(({ daysOfMonth, monthName, startsOn }) => {
+      const days = [...Array(daysOfMonth).keys()]
+      const firstDayAttributes = `class='first-day' style='--first-day-start: ${startsOn}'`
+      const htmlDaysName = weekDays
+        .map((dayName) => `<li class='day-name'>${dayName}</li>`)
+        .join('')
+      const htmlDays = days
+        .map(
+          (day, index) =>
+            `<li ${index === 0 ? firstDayAttributes : ''}>${day + 1}</li>`
+        )
+        .join('')
+      return `<h2>${monthName} ${actualYear}</h2><ol>${htmlDaysName}${htmlDays}</ol>`
+    })
+    .join('')
+
+  document.querySelector('divcal').innerHTML = html
+</script>
+
+    <p><a href="index.html"><button>Voler</button></a></p>--> 
+</body>
+<footer>
+    <div class="pie">
+        <h2>By R.Caballero @</h2>
+      </div>
+</footer>
+</html>

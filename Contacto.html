@@ -1,0 +1,65 @@
+Contacto.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="./css/estilos.css" >
+    <script src="ejecutor.js"></script>
+
+</head>
+<header>
+    <div class="navbar">
+        <a href="Portofolio.html">Portofolio</a>
+        <a href="Biografia.html">Bibliografía</a>
+        <a href="Contacto.html">Contacto</a>
+        <a href="index.html">Inicio</a>
+        
+      </div>
+</header>
+<body>
+    <section id="cajapadre">
+        <div id="caja-1"> 
+            
+            <form name= "formulario" method="POST" action="registro.php">
+                <p><label>Nombre:<input type="text" name="nombre" maxlength="20"></label></p>
+                <p><label>Apellidos:<input type="text" name="apellidos" maxlength="30"></label></p>
+                <p><label>Correo:<input type="email" name="correo"></label></p>
+                <p><input type="submit" value="enviar"></p>
+
+            </form>
+            <!--
+            <form action="registro.php" method="POST">
+                <h2><em>Formulario de Registro</em></h2>  
+     
+                <label for="nombre">Nombre <span><em>(requerido)</em></span></label>
+                <input type="text" name="nombre" class="form-input" required/>   
+      
+                <label for="apellido">Apellido <span><em>(requerido)</em></span></label>
+                <input type="text" name="apellido" class="form-input" required/>         
+      
+                <label for="email">Email <span><em>(requerido)</em></span></label>
+                <input type="email" name="email" class="form-input" />
+                <center> <input class="form-btn" name="submit" type="submit" value="Suscribirse" /></center>
+                </p>
+            </form> -->
+            
+        </div>
+        <div id="caja-2">    
+            <h2>Contacto</h2>
+            <h3>Nueva página, de nombre contacto.html, en la que se deberá incluir al menos un formulario.</h3>	
+            <p>Combinamos h2, h3, p</p>
+       </div>
+        <!-- <div id="caja-3">caja3</div>
+        <div id="caja-4">caja4</div>-->
+    </section>
+    <!--<p><a href="index.html"><button>Voler</button></a></p>-->
+</body>
+<footer>
+    <div class="pie">
+        <h2>By R.Caballero @</h2>
+      </div>
+</footer>
+</html>
