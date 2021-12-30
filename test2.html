@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+
+    <p id ="demo" ></p>
+    <p id ="demo2" ></p>
+    <button id="myButton">Siguiente</button>
+    <!--<button id="myButton2">Terminar</button>-->
+    <p id="mymarker"></p>
+    <script>
+    //creamos el objeto
+    const test =
+    [{numPreg:"preg1",resp1:"11",resp2:"12",resp3:"13",
+    resp4:"14", acierto:1},
+
+    {numPreg:"preg2",resp1:"21",resp2:"22",resp3:"23", 
+    resp4:"24",
+    acierto:3},
+
+    {numPreg:"preg3",resp1:"31",resp2:"32",resp3:"33",
+    resp4:"34",
+    acierto:2}
+    ];   
+    // declaramos las variables
+    let button = document.getElementById("myButton");
+    let button2 = document.getElementById("myButton2");
+    let marker = document.getElementById("mymarker");
+    let click=0;
+    let bien=0;
+    let i = 0;
+    
+   
+    // mostramos el objeto
+       
+    button.onclick = function(){
+        console.log(this.id+": Clicked!");
+        if (click <3){    
+            document.getElementById("demo").innerHTML= 
+                `<div>
+                    <h2>${test[i].numPreg}</h2
+                    <form name=vRespuesta>
+                    <ul style="list-style-type:none;">
+                        <li><input type="radio" id = "${test[i].resp1}" name = "respuesta" value=1> <label for = "resp[11]"> ${test[i].resp1}</label> </li>
+
+                        <li><input type="radio" id = "${test[i].resp2}" name = "respuesta" value=2> <label for = "resp[11]">${test[i].resp2}</label> </li>
+
+                        <li><input type="radio" id = "${test[i].resp3}" name = "respuesta" value=3> <label for = "resp[11]">${test[i].resp3}</label> </li>
+
+                        <li><input type="radio" id = "${test[i].resp4}" name = "respuesta" value=4> <label for = "resp[11]">${test[i].resp4}</label> </li>
+                    </ul>
+                    </form>
+                </div>`
+
+            click++;
+            i = click;
+                 
+        }
+        else 
+        if (click = 4){
+            document.getElementById("demo").innerHTML= `${"el resultado es:"} ${bien}`
+            click = 0;
+
+        }   
+        update_marker();
+    }
+        
+        function update_marker(){
+           
+            marker.innerHTML = "Click: "+ click + " ";
+            marker.innerHTML += "bien: "+ bien + " ";
+            marker.innerHTML += "valor: "+ value + " ";
+            
+            }
+        
+    </script>
+    
+</body>
+</html>
