@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+ //Crear la clase Persona, con propiedades nombre, edad y género, y el método obtDetalles(), que muestra por pantalla las propiedades de la persona.
+ class Persona {
+     constructor(nombre, edad,genero){
+         this.nombre = nombre;
+         this.edad = edad;
+         this.genero = genero; 
+     }
+     objDetalles(){
+         console.log ("Tu nombre es "+this.nombre+" tienes "+this.edad+" años "+ "genero"+ " " +this.genero)
+     }
+ }
+ let miPersona = new Persona("Raul", 20, "masculino");
+console.log(miPersona)
+ miPersona.objDetalles();
+ /*Crear la clase Estudiante, que hereda de Persona, e incluye las propiedades curso y grupo y el método registrar(), que muestre por pantalla el resultado. */
+
+class Estudiante extends Persona { 
+  constructor (nombre, edad, genero, curso, grupo) {
+    super(nombre, edad,genero)
+    this.curso = curso;
+    this.grupo = grupo;
+    }   
+    registrar(){
+        return "Tu nombre es "+this.nombre+" tienes "+this.edad+" años "+ " genero "+this.genero +  " del curso "+ this.curso+ " del grupo "+this.grupo
+        };
+  
+};
+
+
+let miEstudiante = new Estudiante("Ramon",26,"masculino","tercero", "A");
+console.log(miEstudiante);
+miEstudiante.registrar();
+document.querySelector('body').innerHTML = `${miEstudiante.registrar()}`
+
+/*Crear la clase Profesor, que hereda de Persona, e incluye las propiedades asignatura y nivel y el método asignar(), que muestre por pantalla el resultado. */
+
+class Profesor extends Persona {
+    constructor (nombre, edad, genero, asignatura, nivel){
+    super(nombre, edad,genero)
+    this.asignatura = asignatura;
+    this.nivel = nivel;
+    }
+    asignar(){
+        return "Tu nombre es "+this.nombre+" tienes "+this.edad+" años "+ " genero "+this.genero +  " de la asignatura de "+ this.asignatura+ " del nivel "+this.nivel
+        };
+};
+let miProfesor = new Profesor("Rafa",28,"masculino","ciencias", "medio");
+console.log(miProfesor);
+miProfesor.asignar();
+document.querySelector('body').innerHTML = `${miProfesor.asignar()}`
+
+    </script>
+</body>
+</html>
