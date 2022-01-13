@@ -5,12 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test</title>
+    <link rel="stylesheet" href="./css/estilos.css">
 </head>
+<header>
+    <div class="navbar">
+        <a href="index.html">Inicio</a>    
+    </div>
+</header>
 <body>
 
     <p id ="demo" ></p>
     <p id ="demo2" ></p>
+    <div class="navbar">
     <button id="myButton">Siguiente</button>
+    </div>
     <p id="mymarker"></p>
     <script>
     //creamos el objeto
@@ -39,37 +47,37 @@
     resp3:"De supresión.",
     resp4:"Las dos anteriores.",
     acierto:4},
-    {numPreg:"Las casillas premarcadas:",
+    {numPreg:"5- Las casillas premarcadas:",
     resp1:"Constituyen un consentimiento válido.",
     resp2:"No constituye un consentimiento válido.",
     resp3:"Depende",
     resp4:"Ninguna de las anteriores.",
     acierto:2},
-    {numPreg:"¿Cuál de las siguientes entidades necesitan un DPO?",
+    {numPreg:"6- ¿Cuál de las siguientes entidades necesitan un DPO?",
     resp1:"Entidades que exploten redes y presten servicios de telecomunicaciones.",
     resp2:"Operadores de juego a través de canales telemáticos.",
     resp3:"Colegios profesionales, hospitales y colegios.",
     resp4:"Todas son correctas.",
     acierto:4},
-    {numPreg:"¿Cuál de las siguientes afirmaciones no es una excepción frente a la regla general para el envío de comunicaciones comerciales por medios electrónicos?",
+    {numPreg:"7- ¿Cuál de las siguientes afirmaciones no es una excepción frente a la regla general para el envío de comunicaciones comerciales por medios electrónicos?",
     resp1:"Se pueden enviar comunicaciones comerciales si existe una relación comercial previa.",
     resp2:"Se han obtenido los datos lícitamente.",
     resp3:"La comunicación es relativa a los mismos productos y servicios contratados.",
     resp4:"Los datos estaban disponibles en Internet.",
     acierto:4},
-    {numPreg:"¿Cuál de las siguientes afirmaciones es correcta conforme a la normativa que regula la firma electrónica?",
+    {numPreg:"8- ¿Cuál de las siguientes afirmaciones es correcta conforme a la normativa que regula la firma electrónica?",
     resp1:"La firma electrónica puede ser utilizada como un medio de identificación del firmante.",
     resp2:"La firma electrónica no se puede utilizar para identificar a un firmante sin su consentimiento pues sería una infracción de la normativa de protección de datos.",
     resp3:"La firma electrónica siempre incluye una firma manual escaneada.",
     resp4:"Ninguna de las anteriores es correcta.",
     acierto:1},
-    {numPreg:"¿Cuál de las siguientes afirmaciones es correcta?",
+    {numPreg:"9- ¿Cuál de las siguientes afirmaciones es correcta?",
     resp1:"El derecho de reproducir un software equivale a darle al «play» para que funcione.",
     resp2:"El derecho de transformación incluye la capacidad de hacer nuevas versiones del software.",
     resp3:"El software solo se protege a través de patentes.",
     resp4:"El software no se puede proteger en ningún caso pues afectaría a la capacidad de innovación.",
     acierto:2},
-    {numPreg:"La suplantación de identidad en Internet que persigue apropiarse de datos confidenciales de los usuarios para menoscabar patrimonios ajenos se denomina:",
+    {numPreg:"10- La suplantación de identidad en Internet que persigue apropiarse de datos confidenciales de los usuarios para menoscabar patrimonios ajenos se denomina:",
     resp1:"Phising.",
     resp2:"Suplantación de identidad.",
     resp3:"Pharming.",
@@ -101,6 +109,7 @@
                     </ul>
                     </form>
                 </div>`
+            
             click ++;
             i =click;
           //crea variable referencia que selecciona del input name del formulario.
@@ -126,8 +135,8 @@
         }
         else 
         if (click = 10){
-            document.getElementById("demo").innerHTML= `${"el resultado es:"} ${bien} ${"de 10"} `
-            click = 0;
+            document.getElementById("demo").innerHTML= `${"el resultado es:"} ${bien} ${"de 10"} ${"salir"}`
+            //click = 0;
 
         }
         update_marker();
@@ -137,11 +146,15 @@
            
             marker.innerHTML = "Click: "+ click + " ";
             marker.innerHTML += "bien: "+ bien + " ";
-            marker.innerHTML += "resultado: "+ 7 + " ";
             
         }
         
     </script>
     
 </body>
+<footer>
+    <div class="pie">
+        <h2>By R.Caballero @</h2>
+      </div>
+</footer>
 </html>
